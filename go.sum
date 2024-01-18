@@ -27,6 +27,8 @@ github.com/nexryai/summergo v0.0.4 h1:E5jXvg97sjmqTuSiXnruvrMFX0PQt4Ah4dpih2/fWN
 github.com/nexryai/summergo v0.0.4/go.mod h1:Yp0dr46QngLfd0jWNe1UkTEdeogOCH+fqhOHcELQels=
 github.com/nexryai/summergo v0.0.5 h1:75eAJJCr5lb4hr0iukZG/tdgsG0bxoqIQ59J5Y+pPdk=
 github.com/nexryai/summergo v0.0.5/go.mod h1:Yp0dr46QngLfd0jWNe1UkTEdeogOCH+fqhOHcELQels=
+github.com/nexryai/summergo v0.0.6 h1:WAuHbTEeQCYk9GqQ/+3xJUmfX11FA+idMGstNGhBBqo=
+github.com/nexryai/summergo v0.0.6/go.mod h1:Yp0dr46QngLfd0jWNe1UkTEdeogOCH+fqhOHcELQels=
 github.com/nexryai/visualog v0.0.1 h1:TV+PFzRHUDS6NTtL0Jb39bVQxqDSgPHNciWA0m+CAvE=
 github.com/nexryai/visualog v0.0.1/go.mod h1:ODcYfc6Wk0cWFPP1Vjv5u+9RQLOToH5MeQKRP+MdfPA=
 github.com/philhofer/fwd v1.1.2 h1:bnDivRJ1EWPjUIRXV5KfORO897HTbpFAQddBdE8t7Gw=
