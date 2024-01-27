@@ -15,16 +15,21 @@ func main() {
 	app := fiber.New()
 
 	// キャッシュする
-	app.Use(cache.New(cache.Config{
-		ExpirationGenerator: func(c *fiber.Ctx, cfg *cache.Config) time.Duration {
-			// 15分
-			return time.Minute * 15
-		},
-		KeyGenerator: func(c *fiber.Ctx) string {
-			// パスが違ってもクエリが同じなら同じ内容
-			return utils.CopyString(c.Query("url"))
-		},
-	}))
+	if os.Getenv("DISABLE_CACHE") != "1" {
+		log.Info("Cache enabled")
+		app.Use(cache.New(cache.Config{
+			ExpirationGenerator: func(c *fiber.Ctx, cfg *cache.Config) time.Duration {
+				// 15分
+				return time.Minute * 15
+			},
+			KeyGenerator: func(c *fiber.Ctx) string {
+				// パスが違ってもクエリが同じなら同じ内容
+				return utils.CopyString(c.Query("url"))
+			},
+		}))
+	} else {
+		log.Warn("Cache disabled")
+	}
 
 	// ルーター
 	router.SummalyRouter(app)
