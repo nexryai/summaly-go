@@ -17,8 +17,8 @@ func main() {
 	// キャッシュする
 	app.Use(cache.New(cache.Config{
 		ExpirationGenerator: func(c *fiber.Ctx, cfg *cache.Config) time.Duration {
-			// 4時間
-			return time.Hour * 4
+			// 15分
+			return time.Minute * 15
 		},
 		KeyGenerator: func(c *fiber.Ctx) string {
 			// パスが違ってもクエリが同じなら同じ内容
