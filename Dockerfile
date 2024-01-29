@@ -1,14 +1,14 @@
-FROM golang:alpine AS builder
+FROM alpine:edge AS builder
 
 WORKDIR /app
 
 COPY . ./
 
 RUN sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#https://mirrors.xtom.com.hk/alpine#g' /etc/apk/repositories \
- && apk add --no-cache git ca-certificates build-base \
+ && apk add --no-cache go git ca-certificates build-base \
  && go build -ldflags="-s -w" -trimpath -o summaly main.go
 
-FROM alpine:3.12
+FROM alpine:edge
 
 WORKDIR /app
 
