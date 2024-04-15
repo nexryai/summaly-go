@@ -38,7 +38,7 @@ func main() {
 
 	err := app.Listen(":3000")
 	if err != nil {
-		log.FatalWithDetail("Failed to listen on :3000:", err)
+		log.FatalWithDetail("Failed to listen on :3000  >>> ", err)
 		os.Exit(1)
 	}
 }
