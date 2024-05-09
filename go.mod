@@ -4,7 +4,7 @@ go 1.21.5
 
 require (
 	github.com/gofiber/fiber/v2 v2.52.2
-	github.com/nexryai/summergo v0.1.3
+	github.com/nexryai/summergo v0.1.5
 	github.com/nexryai/visualog v0.0.1
 )
 
@@ -23,7 +23,7 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.51.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
-	golang.org/x/net v0.21.0 // indirect
-	golang.org/x/sys v0.17.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
+	golang.org/x/net v0.25.0 // indirect
+	golang.org/x/sys v0.20.0 // indirect
+	golang.org/x/text v0.15.0 // indirect
 )
