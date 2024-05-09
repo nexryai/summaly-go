@@ -1,5 +1,5 @@
 ## summaly-go
-Misskey（とその派生）で使えるsummaly-proxy  
+Misskey（とその派生）で使えるGoで書かれた軽量なsummaly-proxy  
 中身は[別ライブラリ（summergo）として](https://github.com/nexryai/summergo)公開しています
 
 

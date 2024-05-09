@@ -31,9 +31,7 @@ func SummalyRouter(app *fiber.App) {
 			log.ErrorWithDetail("Error on Summarize():", err)
 			ctx.Status(400)
 			return ctx.SendString("Invalid URL")
-		}
-
-		if summaly == nil {
+		} else if summaly == nil {
 			log.Error("Result is nil. returning 500")
 			ctx.Status(500)
 			return ctx.SendString("Internal Server Error")
