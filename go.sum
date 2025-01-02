@@ -15,8 +15,8 @@ github.com/mattn/go-runewidth v0.0.16 h1:E5ScNMtiwvlvB5paMFdw9p4kSQzbXFikJ5SQO6T
 github.com/mattn/go-runewidth v0.0.16/go.mod h1:Jdepj2loyihRzMpdS35Xk/zdY8IAYHsh153qUoGf23w=
 github.com/nexryai/archer v0.1.0 h1:Oz59OWVvRAPhrRlX7+G8oCvNFipaqxu7TEfEGA2Iwjk=
 github.com/nexryai/archer v0.1.0/go.mod h1:cjBXUP/oxPpm8JMiZW5GPpzC6s+ZmaVPxTxrxw+zxJM=
-github.com/nexryai/summergo v0.1.8 h1:IVBEPH53Vv7GGqDu1Iti10LA1JH/u87JjpO338gHmHY=
-github.com/nexryai/summergo v0.1.8/go.mod h1:V7plYVYKkj4x2eZi6eUCv72H/u0Ak3We7HQK3/Suze0=
+github.com/nexryai/summergo v0.1.9 h1:IfIIo/PHO4pkaWq9phy+QZ2yFUHMmgwoy78xvluIUwA=
+github.com/nexryai/summergo v0.1.9/go.mod h1:/38XwNWSXZscM92TuJlOV+YbCZh0rfjU1FqIwyK0aMc=
 github.com/nexryai/visualog v0.0.1 h1:TV+PFzRHUDS6NTtL0Jb39bVQxqDSgPHNciWA0m+CAvE=
 github.com/nexryai/visualog v0.0.1/go.mod h1:ODcYfc6Wk0cWFPP1Vjv5u+9RQLOToH5MeQKRP+MdfPA=
 github.com/philhofer/fwd v1.1.3-0.20240916144458-20a13a1f6b7c h1:dAMKvw0MlJT1GshSTtih8C2gDs04w8dReiOGXrGLNoY=
@@ -34,15 +34,11 @@ github.com/valyala/fasthttp v1.52.0 h1:wqBQpxH71XW0e2g+Og4dzQM8pk34aFYlA1Ga8db7g
 github.com/valyala/fasthttp v1.52.0/go.mod h1:hf5C4QnVMkNXMspnsUlfM3WitlgYflyhHYoKol/szxQ=
 github.com/valyala/tcplisten v1.0.0 h1:rBHj/Xf+E1tRGZyWIWwJDiRY0zc1Js+CV5DqwacVSA8=
 github.com/valyala/tcplisten v1.0.0/go.mod h1:T0xQ8SeCZGxckz9qRXTfG43PvQ/mcWh7FwZEA7Ioqkc=
-golang.org/x/net v0.30.0 h1:AcW1SDZMkb8IpzCdQUaIq2sP4sZ4zw+55h6ynffypl4=
-golang.org/x/net v0.30.0/go.mod h1:2wGyMJ5iFasEhkwi13ChkO/t1ECNC4X4eBKkVFyYFlU=
 golang.org/x/net v0.33.0 h1:74SYHlV8BIgHIFC/LrYkOGIwL19eTYXQ5wc6TBuO36I=
 golang.org/x/net v0.33.0/go.mod h1:HXLR5J+9DxmrqMwG9qjGCxZ+zKXxBru04zlTvWlWuN4=
 golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.6.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.28.0 h1:Fksou7UEQUWlKvIdsqzJmUmCX3cZuD2+P3XyyzwMhlA=
 golang.org/x/sys v0.28.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
-golang.org/x/text v0.19.0 h1:kTxAhCbGbxhK0IwgSKiMO5awPoDQ0RpfiVYBfK860YM=
-golang.org/x/text v0.19.0/go.mod h1:BuEKDfySbSR4drPmRPG/7iBdf8hvFMuRexcpahXilzY=
 golang.org/x/text v0.21.0 h1:zyQAAkrwaneQ066sspRyJaG9VNi/YJ1NfzcGB3hZ/qo=
 golang.org/x/text v0.21.0/go.mod h1:4IBbMaMmOPCJ8SecivzSH54+73PCFmPWxNTLm+vZkEQ=
