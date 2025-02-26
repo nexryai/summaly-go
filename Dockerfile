@@ -1,25 +1,17 @@
-FROM alpine:edge AS builder
+FROM golang:1-alpine AS builder
 
 WORKDIR /app
 
 COPY . ./
 
-RUN sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#https://mirrors.xtom.com.hk/alpine#g' /etc/apk/repositories \
- && apk add --no-cache go git ca-certificates build-base \
- && go build -ldflags="-s -w" -trimpath -o summaly main.go
+ENV CGO_ENABLED=0
+RUN go build -trimpath -o summaly main.go
 
-FROM alpine:edge
+FROM gcr.io/distroless/static-debian12
 
 WORKDIR /app
 
 COPY --from=builder /app/summaly /app/summaly
 
-RUN sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#https://mirrors.xtom.com.hk/alpine#g' /etc/apk/repositories \
- && apk add --no-cache ca-certificates tini \
- && addgroup -g 749 app \
- && adduser -u 749 -G app -D -h /app app \
- && chmod +x /app/summaly \
- && chown -R app:app /app
-
-USER app
-CMD [ "tini", "--", "/app/summaly" ]
+USER 749
+ENTRYPOINT [ "/app/summaly" ]
