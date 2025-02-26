@@ -1,4 +1,4 @@
-name: Docker CI (Docker Hub)
+name: Docker CI (GHCR)
 permissions: {}
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
 
 
 env:
-  REGISTRY_IMAGE: nexryai/summaly-go
+  REGISTRY_IMAGE: ghcr.io/nexryai/summaly-go
   STABLE_REF: refs/heads/main
 
 jobs:
@@ -27,6 +27,7 @@ jobs:
 
     permissions:
       contents: read
+      packages: write
 
     steps:
       - name: Prepare
@@ -46,11 +47,12 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Login to Docker Hub
+      - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push by digest
         id: build
@@ -79,6 +81,9 @@ jobs:
     name: 📦 Merge digests and Tagging images
     runs-on: ubuntu-latest
 
+    permissions:
+      packages: write
+
     needs:
       - build
 
@@ -104,11 +109,12 @@ jobs:
           flavor: |
             latest=${{ github.ref == env.STABLE_REF }}
 
-      - name: Login to Docker Hub
+      - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create manifest list and push
         working-directory: /tmp/digests
