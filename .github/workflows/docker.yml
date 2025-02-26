@@ -140,6 +140,8 @@ jobs:
         run: |
           MIRROR_REG_DOMAIN=$(echo ${{ env.MIRROR_IMAGE }} | cut -d'/' -f1)
 
+          echo $(jq -cr '.tags | map(select((split("/")[0] | test("[.:]") | not))) | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON")
+
           docker buildx imagetools create $(jq -cr '.tags | map(select((split("/")[0] | test("[.:]") | not))) | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
             $(printf '${{ env.REGISTRY_IMAGE }}@sha256:%s ' *)
 
