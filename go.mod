@@ -3,7 +3,7 @@ module lab.sda1.net/nexryai/summaly-go
 go 1.21.5
 
 require (
-	github.com/gofiber/fiber/v2 v2.52.8
+	github.com/gofiber/fiber/v2 v2.52.9
 	github.com/nexryai/summergo v0.1.9
 	github.com/nexryai/visualog v0.0.1
 )
